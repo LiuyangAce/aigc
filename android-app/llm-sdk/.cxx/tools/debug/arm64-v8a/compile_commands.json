@@ -1,0 +1,7 @@
+[
+{
+  "directory": "Z:/android-app/llm-sdk/.cxx/Debug/6l2l2y2w/arm64-v8a",
+  "command": "Z:\\android-sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android28 --sysroot=Z:/android-sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dllm_jni_EXPORTS -IZ:/android-app/llm-sdk/src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -fno-limit-debug-info  -fPIC -std=c++11 -o CMakeFiles\\llm_jni.dir\\src\\main\\cpp\\llm_jni.cpp.o -c Z:\\android-app\\llm-sdk\\src\\main\\cpp\\llm_jni.cpp",
+  "file": "Z:\\android-app\\llm-sdk\\src\\main\\cpp\\llm_jni.cpp"
+}
+]

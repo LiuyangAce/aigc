@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.library'
+}
+android {
+    namespace 'com.vivo.llmsdk'
+    compileSdk 34
+    defaultConfig {
+        minSdk 28
+        externalNativeBuild {
+            cmake { cppFlags "-std=c++11" }
+        }
+        ndk { abiFilters 'arm64-v8a' }
+    }
+    externalNativeBuild {
+        cmake { path "CMakeLists.txt"; version "3.22.1" }
+    }
+    sourceSets {
+        main { jniLibs.srcDirs = ['src/main/jniLibs'] }
+    }
+}

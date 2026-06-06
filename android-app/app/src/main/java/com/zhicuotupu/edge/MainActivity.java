@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String PREFS_NAME = "edge_cloud_settings";
     private static final String PREF_API_URL = "analysis_api_url";
     private static final String PREF_OFFLINE_RESULT = "offline_recognition_result";
+    private static final String DEFAULT_ANALYSIS_API_URL =
+        "https://zhicuotupu-api.onrender.com/api/analyze-question";
     private static final String RECOGNITION_PROMPT =
         "你只负责从错题图片提取文字和视觉线索，不要判断答案是否正确，不要验算，不要分析错因。"
             + "严格区分学生黑色手写与老师红笔批改；无法确定内容属于学生作答时，user_answer_candidate必须返回空字符串。"
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         interrupt = findViewById(R.id.btnInterrupt);
         saveOffline = findViewById(R.id.btnSaveOffline);
         cloudAnalyze = findViewById(R.id.btnCloudAnalyze);
-        apiUrl.setText(getPreferences().getString(PREF_API_URL, ""));
+        apiUrl.setText(getPreferences().getString(PREF_API_URL, DEFAULT_ANALYSIS_API_URL));
         restoreOfflineResult();
     }
 

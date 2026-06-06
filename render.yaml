@@ -2,12 +2,19 @@ services:
   - type: web
     name: zhicuotupu-api
     runtime: python
+    plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: APP_ENV
         value: production
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: VIVO_APP_ID
+        sync: false
+      - key: VIVO_APP_KEY
+        sync: false
       - key: VIVO_API_BASE_URL
         value: https://api-ai.vivo.com.cn/v1
       - key: VIVO_MODEL_NAME
